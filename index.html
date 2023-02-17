@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JSModule</title>
+        <meta charset = "utf-8">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <button class="add-event-button">Add an event</button>
+        <div class="calendar">
+
+           
+        </div>
+        <div class="modal">
+            <div class="innerModal">
+                    <label name="title-event" class="name-of-input">Name of event:</label>   
+                    <input id="title-event" type="text" class="text-action">
+            
+                    <label for="start-event" class="name-of-input">Start</label>
+                    <input id="start-event" type="time" class="start-action">
+            
+                    <label for="duration-event"class="name-of-input">Duration in minutes:</label>
+                    <input id="duration-event" type="number" class="duration-action">
+            
+                    <button type="button" class="input-btn-add">Add an event</button>
+                    <button type="button" class="input-btn-edit">Edit an event</button>
+                    <button type="button" class="btn-remove">Remove event</button>
+                    <button type="button" class="input-btn-close">Close this window</button> 
+            </div>
+        </div>
+
+            <!-- <div class="modal-event">
+                <div class="innerModal-event">
+                        <p class="name-of-event">Name of event:</p>
+                        <p class="name-of-event">Start</p>
+                        <p class="name-of-event">Duration in minutes:</p>
+                </div>
+            </div> -->
+        <script src="js/tasks.js"></script>
+        <script src="js/index.js"></script>
+    </body>
+</html>

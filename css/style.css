@@ -1,0 +1,257 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+
+
+.calendar {
+  max-width: 400px;
+  height: 1080px;
+  margin: 50px auto;
+  font-family: 'Open Sans', sans-serif;
+  position: relative;
+
+}
+
+.one-hour-container {
+  width: 100%;
+  height: 120px;
+  border-top: 1px solid #a9a9a9;
+  
+}
+.time-box {
+  height: 60px;
+  width: 50px;
+  color: #a9a9a9;
+  font-size: 16px;
+
+}
+.harf-an-hour {
+  font-size: 14px;
+  color: #a9a9a9;
+}
+.event-block {
+  position: absolute;
+  padding: 10px;
+}
+.event-block p {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap; 
+}
+/* Modal-event */
+.modal-event {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.65);
+  width: 100%;
+  height: 100vh;
+  
+}
+
+.modal-event_active {
+  display: flex;
+}
+
+.innerModal-event {
+  width: 550px;
+  height: 250px;
+  background: #FFFFFF;
+  border: 1px solid #E2E2E2;
+  box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.4);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  font-family: 'Roboto';
+  font-weight: 700;
+  padding-top: 20px;
+}
+.modal .btn-remove {
+  display: none;
+}
+.modal.edit-modal .btn-remove {
+  display: block;
+}
+.modal .input-btn-edit {
+  display: none;
+}
+.modal.edit-modal .input-btn-edit {
+  display: block;
+}
+.modal .input-btn-add {
+  display: block;
+}
+.modal.edit-modal .input-btn-add {
+  display: none;
+}
+.name-of-event {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  margin: 10px 10px 10px 20px;
+}
+.btn-remove {
+  margin: 5px 0;
+  width: 200px;  
+  height: 50px;
+  font-size: 20px;
+  font-family: 'Open Sans', sans-serif;
+  border-radius: 10px;
+  background-color:  #f03030;
+  color: #ffffff;
+  border: none;
+  margin-left: 70px;
+  margin-top: 15px;
+}
+
+/* Modal */
+
+.modal {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.65);
+  width: 100%;
+  height: 100vh;
+  
+}
+
+.modal_active {
+  display: flex;
+}
+
+.innerModal {
+  width: 350px;
+  height: 450px;
+  background: #FFFFFF;
+  border: 1px solid #E2E2E2;
+  box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.4);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  font-family: 'Roboto';
+  font-weight: 400;
+}
+.name-of-input {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 24px;
+  line-height: 28px;
+  margin: 10px 10px 10px 20px;
+}
+.text-action, 
+.start-action,
+.duration-action {
+  height: 40px;
+  width: 300px;
+  font-size: 20px;
+  line-height: 24px;
+  margin-bottom: 10px;
+  margin-left: 20px;
+
+}
+
+.add-event-button {
+  text-decoration: none;
+  display: flex;
+  position: fixed;
+  left: 200px;
+  top: 100px;
+  color: white;
+  padding: 20px 30px;
+  margin: 10px 20px;
+  border-radius: 10px;
+  font-size: 24px;
+  /* font-weight: 700; */
+  font-family: 'Open Sans', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background-image: linear-gradient(to right, #9EEFE1 0%, #4830F0 51%, #9EEFE1 100%);
+  background-size: 200% auto;
+  box-shadow: 0 0 20px rgba(0, 0, 0, .1);
+  transition: .5s;
+  border: none;
+}
+.add-event-button:hover {
+  background-position: right center;
+}
+
+.input-btn-add,
+.input-btn-edit,
+.input-btn-close {
+  margin: 5px 0;
+  width: 200px;  
+  height: 50px;
+  font-size: 20px;
+  font-family: 'Open Sans', sans-serif;
+  border-radius: 10px;
+  background-color:  #4830F0;
+  color: #ffffff;
+  border: none;
+  margin-left: 70px;
+  margin-top: 15px;
+}
+.input-btn-close {
+  background-color:  #f03073;
+}
+
